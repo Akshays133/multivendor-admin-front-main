@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 import AdminDetail from '../AdminDetail/AdminDetail';
 import { CircularProgress } from '@mui/material';
@@ -15,7 +15,7 @@ const AdminDetails = ({admin}) => {
                method: 'GET',
                headers: {
                'content-type': 'application/json',
-               'Authorization': token
+               'Authorization': `${token}`
                },
                body: JSON.stringify(),
 
