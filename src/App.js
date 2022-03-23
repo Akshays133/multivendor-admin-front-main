@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, hashHistory } from 'react-router-dom';
 import './App.css';
 import Vendors from './Pages/Vendors/Vendors/Vendors';
 import Login from './Pages/Login/Login/Login';
@@ -6,7 +6,7 @@ import Login from './Pages/Login/Login/Login';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter history= {hashHistory}>
         <Switch>
           <Route exact path='/'>
             <Login></Login>
