@@ -49,14 +49,11 @@ const CategoryModal = ({ open, handleClose }) => {
                 }
            })
            if(res){
-                setLoading(false);
                 console.log(res.data.url)
                 setImageUrl(res.data.url)
+                setLoading(false);
            }
           e.preventDefault()
-     }
-     if (loading) {
-       return <CircularProgress />;
      }
      const handleSubmit = e => {
           const category = {
@@ -74,7 +71,7 @@ const CategoryModal = ({ open, handleClose }) => {
                })
                .then(res => res.json())
                .then(info => {
-                    console.log(info);
+                    console.log(info, path);
                     history.push(`${path}/categories`);
                     handleClose();
                });
@@ -108,6 +105,7 @@ const CategoryModal = ({ open, handleClose }) => {
                                              name ="file"
                                              onChange={e => handleImageChange(e)}
                                              />
+                                        {loading && <CircularProgress />}
 
                                         
                                    </Box>
