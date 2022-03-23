@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import { useHistory } from 'react-router-dom'
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Modal from '@mui/material/Modal';
@@ -21,6 +22,7 @@ const style = {
 
 
 const CategoryModal = ({ open, handleClose }) => {
+     const history = useHistory();
      const token = localStorage.getItem('token')
      
      const [name, setName] = useState('') 
@@ -59,6 +61,7 @@ const CategoryModal = ({ open, handleClose }) => {
                .then(res => res.json())
                .then(info => {
                     console.log(info);
+                    history.push(`${path}/categories`);
                     handleClose();
                });
           e.preventDefault()
