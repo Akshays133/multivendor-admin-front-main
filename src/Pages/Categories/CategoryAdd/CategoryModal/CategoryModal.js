@@ -1,10 +1,11 @@
 import React,{useState} from 'react';
-import { useHistory } from 'react-router-dom'
+import { useHistory, useRouteMatch } from 'react-router-dom'
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Modal from '@mui/material/Modal';
 import TextField from '@mui/material/TextField';
 import axios from 'axios';
+import { CircularProgress } from '@mui/material';
 
 
 
@@ -22,10 +23,12 @@ const style = {
 
 
 const CategoryModal = ({ open, handleClose }) => {
+     let { path } = useRouteMatch();
      const history = useHistory();
      const token = localStorage.getItem('token')
      
      const [name, setName] = useState('') 
+     const [loading, setLoading] = useState(false);
      const [imgUrl,setImageUrl] = useState('')
 
      const handleNameChange = (e) =>{
@@ -33,16 +36,27 @@ const CategoryModal = ({ open, handleClose }) => {
           e.preventDefault()
      }
      const handleImageChange = async(e) =>{
+          setLoading(true)
           const file = e.target.files[0]
           console.log(file)
           const formData = new FormData()
           formData.append("file",file)
           const res = await axios.post('https://multivendorapi.herokuapp.com/api/upload', formData, {
                headers: {'content-type': 'multipart/form-data'}
+           }).then((res) => {
+                if(res) {
+                     setLoading(false);
+                }
            })
-           console.log(res.data.url)
-           setImageUrl(res.data.url)
+           if(res){
+                setLoading(false);
+                console.log(res.data.url)
+                setImageUrl(res.data.url)
+           }
           e.preventDefault()
+     }
+     if (loading) {
+       return <CircularProgress />;
      }
      const handleSubmit = e => {
           const category = {
