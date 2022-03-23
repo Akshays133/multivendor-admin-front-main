@@ -56,66 +56,61 @@ const Login = () => {
              return <CircularProgress></CircularProgress>
         }
      return (
-          <>
-               <Container className="login-style">
-                    
-                    <Grid container spacing={2}>
-                         <Grid sx={{ width: '100%', mt: 10 }} item xs={12} md={6}>
-                              <form onSubmit={handleSubmit}>
-                                   <Typography
-                                        sx={{ textAlign: 'center' }}
-                                        color="RGB(155, 35, 53)"
-                                        variant="body1"
-                                        gutterBottom
-                                   >
-                                        Please Login
-                                   </Typography>
-                                   <TextField
-                                        required
-                                        size="small"
-                                        id="outlined-required"
-                                        label="Email"
-                                        sx={{ width: '75%', m: 1 }}
-                                        onBlur={handleOnBlur}
-                                        name="email"
-                                        helperText="Email ID"
-                                        variant="filled"
-                                   />
-                                   <TextField
-                                        required
-                                        size="small"
-                                        id="outlined-password-input"
-                                        label="Password"
-                                        type="password"
-                                        name="password"
-                                        onBlur={handleOnBlur}
-                                        autoComplete="current-password"
-                                        sx={{ width: '75%', m: 1 }}
-                                        helperText="Password"
-                                        variant="filled"
-                                   />
-                                   <Button
-                                        sx={{ width: '50%', m: 2 }}
-                                        variant="contained"
-                                        type="submit"
-                                        size="small"
-                                   >
-                                        Login
-                                   </Button>
-                              </form>
-                              {
-                                   error &&
-                                   <Alert severity="error">Invalid username or password</Alert>
-                              }
-                         </Grid>
-                         
-                                
-                         
-                    </Grid>
-                    
-                   
-               </Container>  
-          </>
+       <>
+         <Container className='login-style'>
+           <Grid container spacing={2}>
+             <Grid sx={{ width: "100%", mt: 10 }} item xs={12} md={6}>
+               <form onSubmit={handleSubmit}>
+                 <Typography
+                   sx={{ textAlign: "center" }}
+                   color='RGB(155, 35, 53)'
+                   variant='body1'
+                   gutterBottom
+                 >
+                   Please Login
+                 </Typography>
+                 <TextField
+                   required
+                   onChange={handleOnBlur}
+                   size='small'
+                   id='outlined-required'
+                   label='Email'
+                   sx={{ width: "75%", m: 1 }}
+                   onBlur={handleOnBlur}
+                   name='email'
+                   helperText='Email ID'
+                   variant='filled'
+                 />
+                 <TextField
+                   required
+                   size='small'
+                   onChange={handleOnBlur}
+                   id='outlined-password-input'
+                   label='Password'
+                   type='password'
+                   name='password'
+                   onBlur={handleOnBlur}
+                   autoComplete='current-password'
+                   sx={{ width: "75%", m: 1 }}
+                   helperText='Password'
+                   variant='filled'
+                 />
+                 <Button
+                   sx={{ width: "50%", m: 2 }}
+                   variant='contained'
+                   type='submit'
+                   size='small'
+                 >
+                   Login
+                 </Button>
+               </form>
+               {error && (
+                 <Alert severity='error'>Invalid username or password</Alert>
+               )}
+             </Grid>
+           </Grid>
+         </Container>
+       </>
      );
 };
 

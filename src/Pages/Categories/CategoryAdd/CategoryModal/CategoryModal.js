@@ -43,10 +43,6 @@ const CategoryModal = ({ open, handleClose }) => {
           formData.append("file",file)
           const res = await axios.post('https://multivendorapi.herokuapp.com/api/upload', formData, {
                headers: {'content-type': 'multipart/form-data'}
-           }).then((res) => {
-                if(res) {
-                     setLoading(false);
-                }
            })
            if(res){
                 console.log(res.data.url)
@@ -71,8 +67,8 @@ const CategoryModal = ({ open, handleClose }) => {
                })
                .then(res => res.json())
                .then(info => {
-                    console.log(info, path);
-                    history.push(`${path}/categories`);
+                    console.log(info);
+                    history.push(`${path}`);
                     handleClose();
                });
           e.preventDefault()
