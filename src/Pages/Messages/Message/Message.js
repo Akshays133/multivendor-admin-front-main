@@ -23,7 +23,7 @@ const Message = ({messages}) => {
                                    gutterBottom
                                    component="div"
                               >
-                                  TEXT
+                                  Text
                               </Typography>
                          </TableCell>
                          <TableCell align="center">
@@ -34,7 +34,7 @@ const Message = ({messages}) => {
                                    component="div"
                               >
                                   
-                                   RECEIVER PHONE
+                                   Receiver Phone
                               </Typography>
                          </TableCell>
                          <TableCell align="center">
@@ -44,7 +44,7 @@ const Message = ({messages}) => {
                                    gutterBottom
                                    component="div"
                               >
-                                 SENDER PHONE
+                                 Sender Phone
                               </Typography>
                          </TableCell>
                          

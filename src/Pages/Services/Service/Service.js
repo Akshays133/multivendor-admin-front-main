@@ -80,7 +80,7 @@ const Service = ({services}) => {
                                    gutterBottom
                                    component="div"
                               >
-                                   SERVICE TITLE
+                                   Service Title
                               </Typography></TableCell>
                          <TableCell align="center"><Typography
                                    sx={{ color: 'tomato', fontWeight:600 }}
@@ -88,7 +88,7 @@ const Service = ({services}) => {
                                    gutterBottom
                                    component="div"
                               >
-                                   SERVICE ID
+                                   Service Id
                               </Typography></TableCell>
                         
                          

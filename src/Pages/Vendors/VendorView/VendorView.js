@@ -109,65 +109,77 @@ function Row(props) {
 
 const VendorView = ({vendors}) => {
      return (
-          <>
-               <TableContainer sx={{mt:1, ml:2}} component={Paper}>
-                    <Table aria-label="collapsible table">
-                    <TableHead>
-                         <TableRow>
-                         <TableCell />
-                         <TableCell align="center"> 
-                              <Typography
-                                   sx={{ color: 'tomato', fontWeight:600 }}
-                                   variant="h6"
-                                   gutterBottom
-                                   component="div"
-                              >
-                                   VENDOR NAME
-                              </Typography>
-                              </TableCell>
-                         <TableCell align="center"> <Typography
-                                   sx={{ color: 'tomato', fontWeight:700 }}
-                                   variant="h6"
-                                   gutterBottom
-                                   component="div"
-                              >
-                                   VENDOR EMAIL
-                              </Typography></TableCell>
-                         <TableCell align="center"> <Typography
-                                   sx={{ color: 'tomato', fontWeight:700 }}
-                                   variant="h6"
-                                   gutterBottom
-                                   component="div"
-                              >
-                                   VENDOR PHONE
-                              </Typography></TableCell>
-                        
-                         <TableCell align="center"> <Typography
-                                   sx={{ color: 'tomato', fontWeight:700 }}
-                                   variant="h6"
-                                   gutterBottom
-                                   component="div"
-                              >
-                                   VENDOR ADDRESS
-                              </Typography></TableCell>
-                         <TableCell align="center"> <Typography
-                                   sx={{ color: 'tomato', fontWeight:700 }}
-                                   variant="h6"
-                                   gutterBottom
-                                   component="div"
-                              >
-                                   VENDOR STATUS
-                              </Typography></TableCell>
-                         </TableRow>
-                    </TableHead>
-                    <TableBody>
-                         {vendors.map((vendor) => (
-                         <Row key={vendor._id} vendor={vendor} />
-                         ))}
-                    </TableBody>
-                    </Table>
-               </TableContainer>
-          </>
+       <>
+         <TableContainer sx={{ mt: 1, ml: 2 }} component={Paper}>
+           <Table aria-label='collapsible table'>
+             <TableHead>
+               <TableRow>
+                 <TableCell />
+                 <TableCell align='center'>
+                   <Typography
+                     sx={{ color: "tomato", fontWeight: 600 }}
+                     variant='h6'
+                     gutterBottom
+                     component='div'
+                   >
+                     Vendor Name
+                   </Typography>
+                 </TableCell>
+                 <TableCell align='center'>
+                   {" "}
+                   <Typography
+                     sx={{ color: "tomato", fontWeight: 700 }}
+                     variant='h6'
+                     gutterBottom
+                     component='div'
+                   >
+                     Vendor Email
+                   </Typography>
+                 </TableCell>
+                 <TableCell align='center'>
+                   {" "}
+                   <Typography
+                     sx={{ color: "tomato", fontWeight: 700 }}
+                     variant='h6'
+                     gutterBottom
+                     component='div'
+                   >
+                     Vendor Phone
+                   </Typography>
+                 </TableCell>
+
+                 <TableCell align='center'>
+                   {" "}
+                   <Typography
+                     sx={{ color: "tomato", fontWeight: 700 }}
+                     variant='h6'
+                     gutterBottom
+                     component='div'
+                   >
+                     Vendor Address
+                   </Typography>
+                 </TableCell>
+                 <TableCell align='center'>
+                   {" "}
+                   <Typography
+                     sx={{ color: "tomato", fontWeight: 700 }}
+                     variant='h6'
+                     gutterBottom
+                     component='div'
+                   >
+                     Vendor Status
+                   </Typography>
+                 </TableCell>
+               </TableRow>
+             </TableHead>
+             <TableBody>
+               {vendors.map((vendor) => (
+                 <Row key={vendor._id} vendor={vendor} />
+               ))}
+             </TableBody>
+           </Table>
+         </TableContainer>
+       </>
      );
 };
 

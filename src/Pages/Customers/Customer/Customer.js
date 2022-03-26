@@ -111,7 +111,7 @@ const Customer = ({customers}) => {
                                    gutterBottom
                                    component="div"
                               >
-                              CUSTOMER PHONE
+                              Customer Phone
                               </Typography>
                          </TableCell>
                          <TableCell align="center">
@@ -121,7 +121,7 @@ const Customer = ({customers}) => {
                                    gutterBottom
                                    component="div"
                               >
-                                   CUSTOMER STATUS
+                                   Customer Status
                               </Typography>
                               </TableCell>
                          <TableCell align="center">
@@ -131,7 +131,7 @@ const Customer = ({customers}) => {
                                    gutterBottom
                                    component="div"
                               >
-                                   CUSTOMER ID
+                                   Customer Id
                               </Typography>
                               
                          </TableCell>

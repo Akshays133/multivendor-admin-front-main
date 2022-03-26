@@ -118,7 +118,7 @@ const Product = ({products}) => {
                                    gutterBottom
                                    component="div"
                               >
-                                    TITLE
+                                    Title
                               </Typography>
                          </TableCell>
                          <TableCell align="center"><Typography
@@ -127,7 +127,7 @@ const Product = ({products}) => {
                                    gutterBottom
                                    component="div"
                               >
-                                    PRICE
+                                    Price
                               </Typography></TableCell>
                          <TableCell align="center"><Typography
                                    sx={{ color: 'tomato', fontWeight:600 }}
@@ -135,7 +135,7 @@ const Product = ({products}) => {
                                    gutterBottom
                                    component="div"
                               >
-                                    CATEGORY
+                                    Category
                               </Typography></TableCell>
                          <TableCell align="center"><Typography
                                    sx={{ color: 'tomato', fontWeight:600 }}
@@ -143,7 +143,7 @@ const Product = ({products}) => {
                                    gutterBottom
                                    component="div"
                               >
-                                    DESCRIPTION
+                                    Description
                               </Typography></TableCell>
                          <TableCell align="center"><Typography
                                    sx={{ color: 'tomato', fontWeight:600 }}
@@ -151,7 +151,7 @@ const Product = ({products}) => {
                                    gutterBottom
                                    component="div"
                               >
-                                    VIEWS
+                                    Views
                               </Typography></TableCell>
                          </TableRow>
                     </TableHead>

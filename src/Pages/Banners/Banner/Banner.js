@@ -97,7 +97,7 @@ const Banner = ({banners}) => {
                                    gutterBottom
                                    component="div"
                               >
-                                   BANNER TITLE
+                                   Banner Title
                               </Typography></TableCell>
                          <TableCell align="center"><Typography
                                    sx={{ color: 'tomato', fontWeight:600 }}
@@ -105,7 +105,7 @@ const Banner = ({banners}) => {
                                    gutterBottom
                                    component="div"
                               >
-                                   BANNER ID
+                                   Banner Id
                               </Typography></TableCell>
                          <TableCell align="center"><Typography
                                    sx={{ color: 'tomato', fontWeight:600 }}
@@ -113,7 +113,7 @@ const Banner = ({banners}) => {
                                    gutterBottom
                                    component="div"
                               >
-                                   BANNER DESCRIPTION
+                                   Banner Description
                               </Typography></TableCell>
                          
                          </TableRow>

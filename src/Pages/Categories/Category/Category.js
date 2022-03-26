@@ -90,7 +90,7 @@ const Category = ({categories}) => {
                                    gutterBottom
                                    component="div"
                               >
-                                   CATEGORY TITLE
+                                   Category Title
                               </Typography></TableCell>
                          <TableCell align="center"><Typography
                                    sx={{ color: 'tomato', fontWeight:600 }}
@@ -98,7 +98,7 @@ const Category = ({categories}) => {
                                    gutterBottom
                                    component="div"
                               >
-                                   CATEGORY ID
+                                   Category Id
                               </Typography></TableCell>
                          <TableCell align="center"><Typography
                                    sx={{ color: 'tomato', fontWeight:600 }}
@@ -106,7 +106,7 @@ const Category = ({categories}) => {
                                    gutterBottom
                                    component="div"
                               >
-                                   TOTAL CATEGORY
+                                   Total Category
                               </Typography></TableCell>
                         
                          
